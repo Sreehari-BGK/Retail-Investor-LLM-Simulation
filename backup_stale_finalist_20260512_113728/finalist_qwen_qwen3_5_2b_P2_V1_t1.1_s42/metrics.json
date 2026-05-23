@@ -1,0 +1,15 @@
+{
+  "run_name": "finalist_qwen_qwen3_5_2b_P2_V1_t1.1_s42",
+  "model": "Qwen/Qwen3.5-2B",
+  "prompt_version": "P2_V1",
+  "temperature": 1.1,
+  "seed": 42,
+  "n_comments": 108,
+  "jsd_stance": 0.44816315737888884,
+  "wasserstein_time": 3.059612983770288,
+  "mmd_semantic": "error: [Errno 22] Invalid argument",
+  "grounded_pct": 0.0,
+  "weakly_grounded_pct": 0.0,
+  "ungrounded_pct": 100.0,
+  "directional_accuracy_pct": null
+}

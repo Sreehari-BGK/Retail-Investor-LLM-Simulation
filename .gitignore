@@ -1,0 +1,33 @@
+# Credentials — never commit
+.env
+
+# Large data files
+data/raw/
+data/processed/*.npy
+data/processed/*.csv
+
+# Outputs (regenerate from scripts)
+outputs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code audit log (local only)
+.claude/bash_audit.log

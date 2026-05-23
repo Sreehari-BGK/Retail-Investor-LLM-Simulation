@@ -1,0 +1,37 @@
+{
+  "event_id": "NVDA_Q3FY26",
+  "ticker": "NVDA",
+  "event_time": "2025-11-19T21:00:00+00:00",
+  "fiscal_quarter": "Q3 FY2026",
+
+  "key_facts": {
+    "revenue_actual": "$57.006B",
+    "revenue_yoy_growth_pct": 62,
+    "eps_actual": "TBD — verify from your SEC data",
+    "eps_beat": true,
+    "revenue_beat": true,
+    "data_center_revenue": "Blackwell GPU ramp",
+    "guidance": "raised guidance for Q4",
+    "gross_margin_note": "check your actual number",
+    "stock_reaction": "initial AH reaction after beat"
+  },
+
+  "notable_highlights": [
+    "Revenue $57B, up 62% year-over-year",
+    "Blackwell GPU production ramp",
+    "Data center segment dominant driver",
+    "Raised Q4 guidance",
+    "Jensen Huang commentary on AI demand"
+  ],
+
+  "plain_summary": "NVIDIA reported Q3 FY2026 revenue of $57 billion, up 62% year-over-year, driven by strong data center demand and the Blackwell GPU production ramp. The company beat expectations and raised guidance for Q4. CEO Jensen Huang highlighted continued AI infrastructure demand.",
+
+  "grounding_keywords": {
+    "revenue_terms": ["revenue", "57", "57 billion", "$57", "57b", "62%", "sales", "top line"],
+    "eps_terms": ["eps", "earnings per share", "earnings", "profit", "net income", "bottom line"],
+    "guidance_terms": ["guidance", "outlook", "q4", "next quarter", "forecast", "raised", "guide"],
+    "product_terms": ["blackwell", "gpu", "chip", "ai chip", "data center", "datacenter", "h100", "h200", "b100", "b200"],
+    "valuation_terms": ["pe", "p/e", "valuation", "overvalued", "undervalued", "multiple", "market cap", "trillion"],
+    "price_action_terms": ["after hours", "after-hours", "ah", "dip", "sold off", "gap", "premarket", "pm"]
+  }
+}

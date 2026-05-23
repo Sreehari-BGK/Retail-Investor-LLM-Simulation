@@ -1,0 +1,15 @@
+{
+  "run_name": "finalist_qwen_qwen3_5_2b_P2_V1_t0.7_s123",
+  "model": "Qwen/Qwen3.5-2B",
+  "prompt_version": "P2_V1",
+  "temperature": 0.7,
+  "seed": 123,
+  "n_comments": 108,
+  "jsd_stance": 0.4604610897295199,
+  "wasserstein_time": 3.127132750728256,
+  "mmd_semantic": 0.09672452114234109,
+  "grounded_pct": 80.6,
+  "weakly_grounded_pct": 16.7,
+  "ungrounded_pct": 2.8,
+  "directional_accuracy_pct": 84.4
+}

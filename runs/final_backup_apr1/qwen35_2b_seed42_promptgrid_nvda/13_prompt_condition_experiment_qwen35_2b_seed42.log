@@ -1,0 +1,87 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+============================================================
+Prompt Condition Experiment — NVDA_Q3FY26
+============================================================
+  Model:          Qwen/Qwen3.5-2B
+  Seed:           42
+  Temperature:    0.9
+  Top-p:          0.95
+  Top-k:          50
+  Max new tokens: 150
+  Dry run:        False
+
+[model] Loading Qwen/Qwen3.5-2B ...
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights:   0%|          | 1/320 [00:00<00:35,  8.87it/s]Loading weights:   5%|▍         | 15/320 [00:00<00:05, 52.86it/s]Loading weights:  52%|█████▏    | 167/320 [00:00<00:00, 538.56it/s]Loading weights:  73%|███████▎  | 235/320 [00:00<00:00, 446.48it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 454.54it/s]
+[model] Loaded on cuda.
+
+────────────────────────────────────────────────────────────
+Running: P0_baseline_current__V0_current
+  Personas: 9 archetypes × 3 = 27 comments
+────────────────────────────────────────────────────────────
+  Generated 27 comments in 95.5s
+  Embedding generated comments ...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 13693.84it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 16.78it/s]
+  Evaluating metrics ...
+  JSD stance:       0.6342539491779262
+  Wasserstein time: 2.7066167290886387
+  MMD semantic:     0.1334106201024794
+  Saved → prompt_exp_P0_V0_comments.csv
+
+────────────────────────────────────────────────────────────
+Running: P1_balanced_retail_reaction__V0_current
+  Personas: 9 archetypes × 3 = 27 comments
+────────────────────────────────────────────────────────────
+  Generated 27 comments in 134.4s
+  Embedding generated comments ...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 15653.79it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 37.26it/s]
+  Evaluating metrics ...
+  JSD stance:       0.45975197961171466
+  Wasserstein time: 2.7066167290886387
+  MMD semantic:     0.13212790282425324
+  Saved → prompt_exp_P1_V0_comments.csv
+
+────────────────────────────────────────────────────────────
+Running: P2_behavior_first_diversity__V1_three_archetypes
+  Personas: 3 archetypes × 9 = 27 comments
+────────────────────────────────────────────────────────────
+  Generated 27 comments in 97.3s
+  Embedding generated comments ...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 16011.17it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 40.83it/s]
+  Evaluating metrics ...
+  JSD stance:       0.4173377824812018
+  Wasserstein time: 2.7066167290886387
+  MMD semantic:     0.10363529175497987
+  Saved → prompt_exp_P2_V1_comments.csv
+
+============================================================
+Done.
+  Combined CSV:    prompt_exp_all_comments.csv
+  Metadata JSONL:  prompt_exp_metadata.jsonl
+  Metrics JSON:    prompt_exp_metrics.json
+  Summary MD:      prompt_exp_summary.md
+============================================================

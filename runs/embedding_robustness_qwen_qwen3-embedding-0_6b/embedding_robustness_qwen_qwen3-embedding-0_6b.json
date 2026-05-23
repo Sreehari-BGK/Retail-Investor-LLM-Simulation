@@ -1,0 +1,49 @@
+{
+  "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+  "event_id": "NVDA_Q3FY26",
+  "device": "cpu",
+  "batch_size": 32,
+  "n_real_comments": 2403,
+  "generated_at": "2026-04-01T14:16:01.738202Z",
+  "results": [
+    {
+      "input_file": "runs\\qwen35_2b_seed42_promptgrid_nvda\\prompt_exp_P2_V1_comments.csv",
+      "label": "qwen35_2b_seed42_promptgrid_nvda/prompt_exp_P2_V1_comments",
+      "run_folder": "qwen35_2b_seed42_promptgrid_nvda",
+      "condition": "P2_V1",
+      "n_real": 2403,
+      "n_sim": 27,
+      "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+      "mmd_semantic_qwen3": 0.15579505478006506,
+      "mmd_semantic_minilm": 0.10363529175497987,
+      "event_id": "NVDA_Q3FY26",
+      "computed_at": "2026-04-01T14:15:47.791484Z"
+    },
+    {
+      "input_file": "runs\\qwen35_2b_temp07_seed42_promptgrid_nvda\\prompt_exp_P2_V1_comments.csv",
+      "label": "qwen35_2b_temp07_seed42_promptgrid_nvda/prompt_exp_P2_V1_comments",
+      "run_folder": "qwen35_2b_temp07_seed42_promptgrid_nvda",
+      "condition": "P2_V1",
+      "n_real": 2403,
+      "n_sim": 27,
+      "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+      "mmd_semantic_qwen3": 0.18995641601472013,
+      "mmd_semantic_minilm": 0.11965054602562208,
+      "event_id": "NVDA_Q3FY26",
+      "computed_at": "2026-04-01T14:16:01.738081Z"
+    },
+    {
+      "input_file": "runs\\qwen25_3b_seed42_promptgrid_nvda\\prompt_exp_P0_V0_comments.csv",
+      "label": "qwen25_3b_seed42_promptgrid_nvda/prompt_exp_P0_V0_comments",
+      "run_folder": "qwen25_3b_seed42_promptgrid_nvda",
+      "condition": "P0_V0",
+      "n_real": 2403,
+      "n_sim": 27,
+      "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+      "mmd_semantic_qwen3": 0.2427186689992169,
+      "mmd_semantic_minilm": 0.13782281839396449,
+      "event_id": "NVDA_Q3FY26",
+      "computed_at": "2026-04-01T14:15:30.991637Z"
+    }
+  ]
+}
