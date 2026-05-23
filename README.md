@@ -223,4 +223,4 @@ If you use the evaluation framework or dataset curation approach:
 Data collected from Reddit's public JSON API.
 Event times verified against SEC EDGAR 8-K filings.
 Conducted under the UQ DATA7901 "Simulating the World" project,
-supervised by [Supervisor Name], School of EAIT.
+supervised by Dr Ruihong Qiu, School of EAIT.
