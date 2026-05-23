@@ -1,0 +1,55 @@
+{
+  "env": {
+    "HF_HUB_DISABLE_SYMLINKS_WARNING": "1"
+  },
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "allow": [
+      "Bash(python scripts/*.py)",
+      "Bash(python scripts/collect_real_reddit.py)",
+      "Bash(python scripts/label_stance_rulebased.py)",
+      "Bash(pip install *)",
+      "Bash(pip install -r requirements.txt)",
+      "Bash(python -m pip *)",
+      "Bash(python -m pytest*)",
+      "Bash(python -c *)",
+      "Bash(ls *)",
+      "Bash(find * -type f*)",
+      "Bash(wc -l *)",
+      "Bash(sort *)",
+      "Bash(mkdir -p data/raw)",
+      "Bash(mkdir -p data/processed)",
+      "Bash(mkdir -p outputs)",
+      "Bash(cat data/*)",
+      "Bash(cat outputs/*)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(git push*)",
+      "Bash(curl * | bash)",
+      "Bash(wget * | bash)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python -c \"import sys,json,datetime; d=json.load(sys.stdin); cmd=d.get('tool_input',{}).get('command','')[:120]; ts=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'); open('.claude/bash_audit.log','a').write(f'[{ts}] {cmd}\\n')\" 2>/dev/null || true"
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python -c \"import sys,json,datetime; d=json.load(sys.stdin); fp=d.get('tool_input',{}).get('file_path') or d.get('tool_response',{}).get('filePath','unknown'); ts=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'); open('.claude/file_audit.log','a').write(f'[{ts}] MODIFIED: {fp}\\n')\" 2>/dev/null || true"
+          }
+        ]
+      }
+    ]
+  }
+}
